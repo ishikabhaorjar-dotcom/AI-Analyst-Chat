@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hide default Streamlit chrome for a cleaner SaaS feel */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+.block-container {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+}
+
+/* --- Hero / title area --- */
+.app-hero {
+    padding: 1.75rem 2rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #1F4E79 0%, #2E6DA4 60%, #4C9BD6 100%);
+    color: white;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 24px rgba(31, 78, 121, 0.18);
+}
+.app-hero h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin: 0 0 0.25rem 0;
+    color: white;
+}
+.app-hero p {
+    font-size: 0.95rem;
+    opacity: 0.92;
+    margin: 0;
+}
+
+/* --- Metric / stat cards --- */
+.metric-card {
+    background: var(--card-bg, #ffffff);
+    border-radius: 14px;
+    padding: 1.1rem 1.3rem;
+    border: 1px solid rgba(31, 78, 121, 0.08);
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+    text-align: left;
+}
+.metric-card .metric-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6B7280;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+.metric-card .metric-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1F4E79;
+}
+
+/* --- Insight cards --- */
+.insight-card {
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.7rem;
+    border-left: 4px solid #1F4E79;
+    background: #F4F8FC;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+.insight-card.warning { border-left-color: #D97706; background: #FFF7ED; }
+.insight-card.positive { border-left-color: #059669; background: #ECFDF5; }
+
+/* --- Agent status trace --- */
+.agent-step {
+    font-size: 0.85rem;
+    padding: 0.35rem 0;
+    color: #374151;
+}
+.agent-step::before {
+    content: "✓ ";
+    color: #059669;
+    font-weight: 700;
+}
+
+/* --- Sidebar --- */
+section[data-testid="stSidebar"] {
+    background: #0F172A;
+}
+section[data-testid="stSidebar"] * {
+    color: #E2E8F0 !important;
+}
+
+/* --- Buttons --- */
+.stButton>button {
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    background: #1F4E79;
+    color: white;
+    padding: 0.5rem 1.1rem;
+}
+.stButton>button:hover {
+    background: #2E6DA4;
+    color: white;
+}
+
+/* --- Chat-style Q&A panel --- */
+.qa-question {
+    font-weight: 600;
+    color: #1F4E79;
+    margin-bottom: 0.3rem;
+}
+.qa-answer {
+    background: #F8FAFC;
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+}
